@@ -1,0 +1,49 @@
+NS_VERSION : 3.26
+DCE_VERSION : 1.9
+KERNEL : net-next-nuse / master
+
+-------------
+Installation:
+-------------
+
+Run the 'install.sh' script OR alternatively, follow the manual installation steps below.
+Set $DCE_PATH to net-next-nuse.
+Create your own script or run the example script included in this repository (dce-iperf.cc). BBR can be set with the '--tcpver=bbr' parameter.
+
+
+-------------------
+Manual installation
+-------------------
+
+Follow the steps in the quick start guide:
+
+https://www.nsnam.org/docs/dce/manual/html/getting-started.html
+Before running 'bake.py configure', overwrite bakeconf.xml with bakeconf_mod.xml
+Run: bake.py configure
+Run: bake.py download
+Before running 'bake.py build', overwrite the files in the directory structure (net-next-nuse).
+Run: bake.py build
+Create a symlink (net-next-nuse/liblinux.so) to net-next-nuse/arch/lib/tools/libsim-linux-4.7.0-rc5.so
+Set $DCE_PATH to net-next-nuse.
+Create your own script or run the example script included in this repository (dce-iperf.cc). BBR can be set with the '--tcpver=bbr' parameter.
+
+
+-----------------
+Patches included:
+-----------------
+
+https://patchwork.ozlabs.org/patch/671056/
+https://patchwork.ozlabs.org/patch/671057/
+https://patchwork.ozlabs.org/patch/671058/
+https://patchwork.ozlabs.org/patch/671059/
+https://patchwork.ozlabs.org/patch/671060/
+https://patchwork.ozlabs.org/patch/671061/
+https://patchwork.ozlabs.org/patch/671062/
+https://patchwork.ozlabs.org/patch/671063/
+https://patchwork.ozlabs.org/patch/671064/
+https://patchwork.ozlabs.org/patch/671065/
+https://patchwork.ozlabs.org/patch/671066/
+https://patchwork.ozlabs.org/patch/671067/
+https://patchwork.ozlabs.org/patch/671068/
+https://patchwork.ozlabs.org/patch/671069/
+https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/commit/?id=f78e73e27fdeab6f9317667f7e9676b59c1ec1fb
